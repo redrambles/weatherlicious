@@ -17,10 +17,14 @@ var cities = {
         "toronto" 	: 	{coords: {latitude: 43.7000, longitude: -79.4000}},
         "chicago" 		: 	{coords: {latitude: 41.879003, longitude: -87.63675}},
         "san francisco" : 	{coords: {latitude: 37.788531, longitude: -122.407237}},
-        "miami" 		:	{coords: {latitude: 25.790176, longitude: -80.140133}},
+        "texas"     : {coords: {latitude: 31.0000, longitude: -100.0000}},
+        "denver"    : {coords: {latitude: 39.7392, longitude: -104.9903}},
         "current location" : {coords: {latitude: 45.3833, longitude: -73.9833}} // Defaults to Montreal
        };
        
+
+var weatherClass = "boo";
+console.log(weatherClass);
 
 function loadWeather(cityCoords){
   console.log(cityCoords);
@@ -41,9 +45,12 @@ function loadWeather(cityCoords){
       success: function(json) {
          console.log(json);
          $("#current_temp").html(Math.round(json.currently.temperature)+"&#176;F | "+Math.round((json.currently.temperature - 32) / 1.8)+"&#176;C");
+         // Fetch the weather description and display it
          $("#current_summary").html(json.currently.summary);
+         //Create a 'data-icon' attribute, place inside value from icons array using the icon property
          $("#current_temp").attr("data-icon",icons[json.currently.icon]);
-
+         // Create a 'data-weather' attribute to hold the icon string to use for background images
+         $("div.ui-panel-content-wrap").attr("data-weather", json.currently.icon.toLowerCase());
       },
       error: function(e) {
          console.log(e.message);
@@ -51,6 +58,8 @@ function loadWeather(cityCoords){
   });
 
 }
+
+console.log(weatherClass);
 
 function loadCity(city){
   $("#location").html(city);

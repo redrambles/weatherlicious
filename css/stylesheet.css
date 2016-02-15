@@ -9,7 +9,6 @@
     font-style: normal;
 }
 
-
 .icon:before {
 	font-family: 'MeteoconsRegular';
 	content: attr(data-icon);
@@ -28,4 +27,40 @@
 
 .content {
 	text-align: center;
+}
+
+/* Background images for weather summaries */
+div[data-weather="clear-day"]{
+  background: url("../images/clear_day.jpg") no-repeat fixed center / cover;
+}
+div[data-weather="clear-night"]{
+  background: url("../images/clear_night.jpg") no-repeat fixed center / cover;
+  color: #eedeb8;
+  text-shadow: none;
+}
+div[data-weather="rain"]{
+  background: url("../images/rain.jpg") no-repeat fixed center / cover;
+}
+div[data-weather="snow"]{
+  background: url("../images/snow.jpg") no-repeat fixed center / cover;
+} 
+div[data-weather="sleet"]{
+  background: url("../images/sleet.jpg") no-repeat fixed center / cover;
+}
+div[data-weather="wind"]{
+  background: url("../images/wind.jpg") no-repeat fixed center / cover;
+}
+div[data-weather="fog"]{
+  background: url("../images/fog.jpg") no-repeat fixed center / cover;
+} 
+div[data-weather="cloudy"]{
+  background: url("../images/cloudy.png") no-repeat fixed center / cover;
+}
+div[data-weather="partly-cloudy-day"]{
+  background: url("../images/cloudy.png") no-repeat fixed center / cover;
+}
+div[data-weather="partly-cloudy-night"]{
+  background: url("../images/cloudy_night.jpg") no-repeat fixed center / cover;
+  color: #eedeb8;
+  text-shadow: none;
 }
