@@ -18,7 +18,7 @@ var cities = {
         "toronto" 	       : {coords: {latitude: 43.7000, longitude: -79.4000}},
         "chicago" 		     : {coords: {latitude: 41.879003, longitude: -87.63675}},
         "san francisco"    : {coords: {latitude: 37.788531, longitude: -122.407237}},
-        "austin"            : {coords: {latitude: 30.287532, longitude: -97.756348}},
+        "austin"           : {coords: {latitude: 30.287532, longitude: -97.756348}},
         "denver"           : {coords: {latitude: 39.7392, longitude: -104.9903}},
         "berlin"           : {coords: {latitude: -52.5167, longitude: 13.3833}},
         "current location" : {coords: {latitude: 45.3833, longitude: -73.9833}} // Defaults to Montreal
@@ -39,11 +39,11 @@ function loadWeather(cityCoords){
       dataType: 'jsonp',
       success: function(json) {
          console.log(json);
-         $("#current_temp").html(Math.round(json.currently.temperature)+"&#176;F | "+Math.round((json.currently.temperature - 32) / 1.8)+"&#176;C");
+         $("#current_temp_icon").html(Math.round(json.currently.temperature)+"&#176;F | "+Math.round((json.currently.temperature - 32) / 1.8)+"&#176;C");
          // Fetch the weather description and display it
          $("#current_summary").html(json.currently.summary);
          //Create a 'data-icon' attribute, place inside value from icons array using the icon property
-         $("#current_temp").attr("data-icon",icons[json.currently.icon]);
+         $("#current_temp_icon").attr("data-icon",icons[json.currently.icon]);
          // Create a 'data-weather' attribute to hold the icon string to use for background images
          $("div.ui-panel-content-wrap").attr("data-weather", json.currently.icon.toLowerCase());
       },
