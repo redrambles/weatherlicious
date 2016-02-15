@@ -40,6 +40,8 @@ div[data-weather="clear-night"]{
 }
 div[data-weather="rain"]{
   background: url("../images/rain.jpg") no-repeat fixed center / cover;
+  color: #eedeb8;
+  text-shadow: none;
 }
 div[data-weather="snow"]{
   background: url("../images/snow.jpg") no-repeat fixed center / cover;
