@@ -22,7 +22,8 @@ var cities = {
         "helsinki"         : {coords: {latitude: 60.169813, longitude: 24.93824}},
         "denver"           : {coords: {latitude: 39.7392, longitude: -104.9903}},
         "berlin"           : {coords: {latitude: -52.5167, longitude: 13.3833}},
-        "paris"           : {coords: {latitude: -48.8567, longitude: 2.3508}},
+        "paris"            : {coords: {latitude: -48.8567, longitude: 2.3508}},
+        "orlando"          : {coords: {latitude: 28.4158, longitude: -81.2989}},
         "current location" : {coords: {latitude: 45.3833, longitude: -73.9833}} // Defaults to Montreal
        };
 
