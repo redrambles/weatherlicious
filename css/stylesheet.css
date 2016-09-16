@@ -56,7 +56,7 @@ div[data-weather="fog"]{
   background: url("../images/fog.jpg") no-repeat fixed center / cover;
 } 
 div[data-weather="cloudy"]{
-  background: url("../images/cloudy.png") no-repeat fixed center / cover;
+  background: url("../images/cloudy.jpg") no-repeat fixed center / cover;
 }
 div[data-weather="partly-cloudy-day"]{
   background: url("../images/cloudy.png") no-repeat fixed center / cover;

@@ -61,8 +61,8 @@ function loadCity(city){
   $("#location").html(city);
 
   if (city.toLowerCase() == "current location") {
-    if ( navigator.geolocation )
-      navigator.geolocation.getCurrentPosition(loadWeather,loadDefaultCity);
+    if ( navigator.geolocation ) {
+      navigator.geolocation.getCurrentPosition(loadWeather,loadDefaultCity); }
     else {
       loadDefaultCity();
     }
